@@ -57,19 +57,19 @@ mas 'iBar-Menubar icon control tool', id: 6443843900
 # mas 'Command X', id: 6448461551
 
 # ----------------------------------------------------------------------------------------------------------
-cask 'aldente'
-cask 'appcleaner'
-cask 'arc'
-cask 'brave-browser'
-cask 'clocker'
-cask 'firefox@nightly' #, greedy: true
-cask 'font-meslo-lg-nerd-font'
+# cask 'aldente'
+# cask 'appcleaner'
+# cask 'arc'
+# cask 'brave-browser'
+# cask 'clocker'
+# cask 'firefox@nightly' #, greedy: true
+# cask 'font-meslo-lg-nerd-font'
 cask 'iterm2'
-cask 'itsycal'
+# cask 'itsycal'
 cask 'keepassxc@beta'
 cask 'keepingyouawake'
 cask 'keybase'
-cask 'libreoffice'
+# cask 'libreoffice'
 cask 'monolingual'
 cask 'notunes'
 cask 'ollama', restart_service: :changed
@@ -79,10 +79,10 @@ cask 'rancher'
 cask 'raycast'
 cask 'silicon' if is_arm
 cask 'stats'
-cask 'the-unarchiver'
-cask 'virtualbox'
-cask 'vscodium@insiders'   # TODO: Doesn't handle 'Remote Containers' and GH-based auto-syncing when comparing to VSCode
-cask 'zen-browser@twilight'
+#cask 'the-unarchiver'
+# cask 'virtualbox'
+cask 'visual-studio-code'   # TODO: Doesn't handle 'Remote Containers' and GH-based auto-syncing when comparing to VSCode
+#cask 'zen-browser@twilight'
 cask 'zoom'
 
 # VSCode extensions
@@ -91,11 +91,13 @@ is_vscode_installed = !`which code`.chomp.empty?
 if is_vscode_installed
   vscode 'brandonkirbyson.vscode-animations'
   vscode 'britesnow.vscode-toggle-quotes'
+  vscode 'burkeholland.simple-react-snippets'
   vscode 'codezombiech.gitignore'
   vscode 'davidanson.vscode-markdownlint'
   vscode 'dbaeumer.vscode-eslint'
   vscode 'digitalbrainstem.javascript-ejs-support'
   vscode 'drcika.apc-extension'
+  vscode 'dsznajder.es7-react-js-snippets'
   vscode 'eamodio.gitlens'
   vscode 'editorconfig.editorconfig'
   vscode 'esbenp.prettier-vscode'
