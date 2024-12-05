@@ -24,6 +24,7 @@ tap 'romkatv/powerlevel10k'
 
 brew 'bash'
 brew 'bat'
+# brew 'brotli'
 brew 'btop'
 brew 'curl'
 brew 'diff-so-fancy'
@@ -38,22 +39,16 @@ brew 'gs'   # used for compressing PDFs
 brew 'jq'
 brew 'less'
 brew 'mise'
-brew 'moreutils'
-brew 'ncdu'
 brew 'powerlevel10k'
 brew 'prettyping'
-brew 'ripgrep'
-brew 'syncthing'
-brew 'tldr'
+brew 'sqlite'
 brew 'vim'
-brew 'watch'
 brew 'wget'
-brew 'wifi-password'
 brew 'zsh'
 
 # ----------------------------------------------------------------------------------------------------------
-brew 'mas'
-mas 'iBar-Menubar icon control tool', id: 6443843900
+# brew 'mas'
+# mas 'iBar-Menubar icon control tool', id: 6443843900
 # mas 'Command X', id: 6448461551
 
 # ----------------------------------------------------------------------------------------------------------
@@ -75,9 +70,15 @@ cask 'notunes'
 cask 'ollama', restart_service: :changed
 cask 'onyx'
 cask 'protonvpn'
+# cask 'clocker'
+cask 'font-meslo-lg-nerd-font'
+cask 'iterm2'
+# cask 'itsycal'
+cask 'keepingyouawake'
+cask 'keybase'
+cask 'gcollazo-mongodb'
 cask 'rancher'
 cask 'raycast'
-cask 'silicon' if is_arm
 cask 'stats'
 #cask 'the-unarchiver'
 # cask 'virtualbox'
