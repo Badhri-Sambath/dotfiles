@@ -20,6 +20,7 @@ cask_args appdir: '/Applications', fontdir: '/Library/Fonts', no_quarantine: tru
 is_arm = Hardware::CPU.arm?
 
 tap 'homebrew/services'
+tap 'mongodb/brew'
 tap 'romkatv/powerlevel10k'
 
 brew 'bash'
@@ -39,6 +40,8 @@ brew 'gs'   # used for compressing PDFs
 brew 'jq'
 brew 'less'
 brew 'mise'
+brew 'mongodb-atlas-cli'
+brew 'mongodb-community@6.0'
 brew 'powerlevel10k'
 brew 'prettyping'
 brew 'sqlite'
