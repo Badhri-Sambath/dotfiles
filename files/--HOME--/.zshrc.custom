@@ -187,6 +187,9 @@ export WORDCHARS="${WORDCHARS:s#.#}"
 export CUCUMBER_COLORS="pending_param=magenta:failed_param=magenta:passed_param=magenta:skipped_param=magenta"
 export RSPEC="true"
 
+# Added by Toolbox App
+export PATH="$PATH:${HOME}/Library/Application Support/JetBrains/Toolbox/scripts"
+
 # fzy
 # zsh-defer load_file_if_exists "${HOME}/.fzy-key-bindings.zsh"
 

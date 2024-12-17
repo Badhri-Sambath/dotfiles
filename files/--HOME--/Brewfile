@@ -22,6 +22,7 @@ cask_args appdir: '/Applications', fontdir: '/Library/Fonts', no_quarantine: tru
 is_arm = Hardware::CPU.arm?
 
 tap 'homebrew/services'
+tap 'mongodb/brew'
 tap 'romkatv/powerlevel10k'
 
 # formulae pulled in from homebrew to replace system equivalents to fix any security issues since the OS was released
@@ -41,46 +42,61 @@ brew 'powerlevel10k'
 
 # formulae pulled in for advanced configs (these are optional, but still recommended)
 brew 'bat'
+# brew 'brotli'
 brew 'btop'
 brew 'eza'
 brew 'git-extras'
 brew 'git-gui'
 brew 'git-tools'
 brew 'jq'
-brew 'moreutils'
-brew 'ncdu'
+# brew 'moreutils'
+# brew 'ncdu'
 brew 'prettyping'
-brew 'ripgrep'
-brew 'syncthing'
-brew 'tldr'
+# brew 'ripgrep'
+brew 'mongodb-atlas-cli'
+brew 'mongodb-community@6.0'
+brew 'sqlite'
 
-cask 'aldente'
-cask 'appcleaner'
-cask 'arc'
-cask 'brave-browser'
-cask 'clocker'
-cask 'firefox@nightly' #, greedy: true
+# ----------------------------------------------------------------------------------------------------------
+# brew 'mas'
+# mas 'iBar-Menubar icon control tool', id: 6443843900
+# mas 'Command X', id: 6448461551
+
+# ----------------------------------------------------------------------------------------------------------
+# cask 'aldente'
 cask 'font-meslo-lg-nerd-font'
+# cask 'appcleaner'
+# cask 'arc'
+# cask 'brave-browser'
+# cask 'clocker'
+# cask 'firefox@nightly' #, greedy: true
 cask 'iterm2'
-cask 'itsycal'
+# cask 'itsycal'
 cask 'jordanbaird-ice'
 cask 'keepassxc@beta'
 cask 'keepingyouawake'
 cask 'keybase'
-cask 'keycastr'
-cask 'libreoffice'
+# cask 'keycastr'
+# cask 'libreoffice'
 cask 'monolingual'
 cask 'notunes'
 cask 'ollama', restart_service: :changed
 cask 'onyx'
 cask 'protonvpn'
+# cask 'clocker'
+cask 'font-meslo-lg-nerd-font'
+cask 'iterm2'
+# cask 'itsycal'
+cask 'keepingyouawake'
+cask 'keybase'
+cask 'gcollazo-mongodb'
 cask 'rancher'
 cask 'raycast'
-cask 'silicon' if is_arm
 cask 'stats'
-cask 'the-unarchiver'
-cask 'vscodium@insiders'   # TODO: Doesn't handle 'Remote Containers' and GH-based auto-syncing when compared to VSCode
-cask 'zen-browser@twilight'
+# cask 'the-unarchiver'
+# cask 'virtualbox'
+cask 'visual-studio-code'   # TODO: Doesn't handle 'Remote Containers' and GH-based auto-syncing when comparing to VSCode
+#cask 'zen-browser@twilight'
 cask 'zoom'
 
 # VSCode extensions
@@ -98,11 +114,13 @@ if is_vscode_installed
   # vscode 'vscjava.vscode-lombok'
   vscode 'brandonkirbyson.vscode-animations'
   vscode 'britesnow.vscode-toggle-quotes'
+  vscode 'burkeholland.simple-react-snippets'
   vscode 'codezombiech.gitignore'
   vscode 'davidanson.vscode-markdownlint'
   vscode 'dbaeumer.vscode-eslint'
   vscode 'digitalbrainstem.javascript-ejs-support'
   vscode 'drcika.apc-extension'
+  vscode 'dsznajder.es7-react-js-snippets'
   vscode 'eamodio.gitlens'
   vscode 'editorconfig.editorconfig'
   vscode 'esbenp.prettier-vscode'
