@@ -25,6 +25,7 @@ is_base_install = ENV.has_key?('HOMEBREW_BASE_INSTALL')
 puts "Only performing base installation!" if is_base_install
 
 tap 'homebrew/services'
+tap 'mongodb/brew'
 tap 'romkatv/powerlevel10k'
 
 # formulae pulled in from homebrew to replace system equivalents to fix any security issues since the OS was released
@@ -52,41 +53,48 @@ return if is_base_install
 
 # formulae pulled in for advanced configs (these are optional, but still recommended)
 brew 'bat'
+# brew 'brotli'
 brew 'btop'
 brew 'git-gui'
 brew 'jq'
-brew 'moreutils'
+brew 'mongodb-community@6.0'
+brew 'mongodb-atlas-cli'
+# brew 'moreutils'
 brew 'ncdu'
 brew 'prettyping'
-brew 'ripgrep'
-brew 'syncthing'
-brew 'tldr'
+# brew 'ripgrep'
+brew 'sqlite'
 
-cask 'aldente'
-cask 'appcleaner'
-cask 'arc'
-cask 'brave-browser'
-cask 'clocker'
-cask 'firefox@nightly' #, greedy: true
-cask 'itsycal'
+# cask 'aldente'
+# cask 'appcleaner'
+# cask 'arc'
+# cask 'brave-browser'
+# cask 'clocker'
+# cask 'firefox@nightly' #, greedy: true
+# cask 'itsycal'
 cask 'jordanbaird-ice'
 cask 'keepassxc@beta'
 cask 'keepingyouawake'
 cask 'keybase'
 cask 'keycastr'
-cask 'libreoffice'
+# cask 'libreoffice'
 cask 'monolingual'
 cask 'notunes'
 cask 'ollama', restart_service: :changed
 cask 'onyx'
 cask 'protonvpn'
+# cask 'clocker'
+# cask 'itsycal'
+cask 'keepingyouawake'
+cask 'keybase'
+cask 'gcollazo-mongodb'
 cask 'rancher'
 cask 'raycast'
-cask 'silicon' if is_arm
 cask 'stats'
-cask 'the-unarchiver'
-cask 'vscodium@insiders'   # TODO: Doesn't handle 'Remote Containers' and GH-based auto-syncing when compared to VSCode
-cask 'zen-browser@twilight'
+# cask 'the-unarchiver'
+# cask 'virtualbox'
+cask 'visual-studio-code'
+#cask 'zen-browser@twilight'
 cask 'zoom'
 
 # VSCode extensions
@@ -104,11 +112,13 @@ if is_vscode_installed
   # vscode 'vscjava.vscode-lombok'
   vscode 'brandonkirbyson.vscode-animations'
   vscode 'britesnow.vscode-toggle-quotes'
+  vscode 'burkeholland.simple-react-snippets'
   vscode 'codezombiech.gitignore'
   vscode 'davidanson.vscode-markdownlint'
   vscode 'dbaeumer.vscode-eslint'
   vscode 'digitalbrainstem.javascript-ejs-support'
   vscode 'drcika.apc-extension'
+  vscode 'dsznajder.es7-react-js-snippets'
   vscode 'eamodio.gitlens'
   vscode 'editorconfig.editorconfig'
   vscode 'esbenp.prettier-vscode'
